@@ -16,17 +16,17 @@
       ｜--.....
 ```
 
-## 训练
+## 2、训练
 ### 单卡运行
 
 ```bash
-python mian.py --model LNG_T --batch-size 256 --data-path ../imagenet-100
+python mian.py --model LNG_T --batch-size 256 --epochs 300 --data-path ../imagenet-100
 ```
 
 ### 多卡并行运行
 
 ```bash
-python -m torch.distributed.launch --nproc_per_node=4 --use_env mian.py --model LNG_T --batch-size 256 --data-path ../imagenet-100
+python -m torch.distributed.launch --nproc_per_node=4 --use_env mian.py --model LNG_T --epochs 300 --batch-size 256 --data-path ../imagenet-100
 ```
 
 
@@ -37,8 +37,8 @@ python -m torch.distributed.launch --nproc_per_node=4 --use_env mian.py --model 
 -data-path：数据集路径。
 ```
 
-## 测试
+## 3、测试
 ```bash
-python  mian.py --model LNG_T --batch-size 256 --data-path ../imagenet-100
+python  mian.py --model LNG_T --eval --batch-size 256 --data-path ../imagenet-100
 ```
 
