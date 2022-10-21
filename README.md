@@ -23,13 +23,13 @@ pip install tool/thop-0.0.31.post2005241907-py3-none-any.whl
 ### 单卡运行
 
 ```bash
-python mian.py --model LNG_T --batch-size 256 --epochs 300 --data-path ../imagenet-100
+python main.py --model LNG_T --batch-size 256 --epochs 300 --data-path ../imagenet-100
 ```
 
 ### 多卡并行运行
 
 ```bash
-python -m torch.distributed.launch --nproc_per_node=4 --use_env mian.py --model LNG_T --epochs 300 --batch-size 256 --data-path ../imagenet-100
+python -m torch.distributed.launch --nproc_per_node=4 --use_env main.py --model LNG_T --epochs 300 --batch-size 256 --data-path ../imagenet-100
 ```
 
 
