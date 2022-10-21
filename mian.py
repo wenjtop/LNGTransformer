@@ -331,7 +331,7 @@ def main(args):
 if __name__ == '__main__':
     parser = argparse.ArgumentParser('Swin Transformer', parents=[get_args_parser()])
     args = parser.parse_args()
-    args.output_dir = args.output_dir+'/'+args.model.split('_')[0]+'50'
+    args.output_dir = args.output_dir+'/'+args.model+"-"+args.data_path.split('/')[-1]
 
     if args.output_dir:
         Path(args.output_dir).mkdir(parents=True, exist_ok=True)
