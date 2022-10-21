@@ -33,7 +33,7 @@ def get_args_parser():
     parser.add_argument('--epochs', default=300, type=int)
 
     # Model parameters
-    parser.add_argument('--model', default='resnet_101', type=str, metavar='MODEL',
+    parser.add_argument('--model', default='LNG_T', type=str, metavar='MODEL',
                         choices=['LNG_T', 'LNG_S', 'LNG_B',
                                  'Swin_T', 'Swin_S', 'Swin_B',
                                  'ViT_B', 'ViT_L',
