@@ -39,6 +39,11 @@ python -m torch.distributed.launch --nproc_per_node=4 --use_env mian.py --model 
 
 ## 3、测试
 ```bash
-python  mian.py --model LNG_T --eval --batch-size 256 --data-path ../imagenet-100
+python main.py --model LNG_T --eval --resume output/LNG_T-imagenet-100/checkpoint.pth --batch-size 256 --data-path ../imagenet-100
+
+```
+```
+-eval:验证模式
+--resume： 权重路径
 ```
 
