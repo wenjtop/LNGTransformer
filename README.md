@@ -3,7 +3,7 @@
 
 
 ```
-1、数据集路径关系：
+## 1、数据集路径关系：
 --imagenet-100
   ｜--train
       ｜--n0144764
@@ -15,21 +15,27 @@
       ｜--.....
 ```
 
-单卡运行
+## 训练
+### 单卡运行
 
 ```bash
-python train.py --model LNG_T --batch-size 256 --data-path ../imagenet-100
+python mian.py --model LNG_T --batch-size 256 --data-path ../imagenet-100
 ```
 
-多卡并行运行
+### 多卡并行运行
 
 ```bash
-python -m torch.distributed.launch --nproc_per_node=4 --use_env train.py --model LNG_T --batch-size 256 --data-path ../imagenet-100
+python -m torch.distributed.launch --nproc_per_node=4 --use_env mian.py --model LNG_T --batch-size 256 --data-path ../imagenet-100
 ```
 ```
 -nproc_per_node：多卡运行时，显卡数量。
 -model：'LNG_T', 'LNG_S', 'LNG_B','Swin_T', 'Swin_S', 'Swin_B','ViT_B', 'ViT_L','resnet_50', 'resnet_101'。
 -batch-size：每一批数量。
 -data-path：数据集路径。
+```
+
+## 测试
+```bash
+python  mian.py --model LNG_T --batch-size 256 --data-path ../imagenet-100
 ```
 
