@@ -49,4 +49,6 @@ python main.py --model LNG_T --eval --resume output/LNG_T-imagenet-100/checkpoin
 -eval:验证模式
 --resume： 权重路径
 ```
+![image](https://user-images.githubusercontent.com/84707983/197465768-5df8aeea-60e4-4b3f-82b6-b10853192fe5.png)
+
 
