@@ -49,7 +49,7 @@ python main.py --model LNG_T --eval --resume output/LNG_T-imagenet-100/checkpoin
 -eval:验证模式
 --resume： 权重路径
 ```
-## 4、结构
+## 4、结果
 ![截屏2022-10-24 14 59 33](https://user-images.githubusercontent.com/84707983/197466279-b37e02fd-4c50-4e7d-833e-d9e4d69e2c5d.png)
 
 
